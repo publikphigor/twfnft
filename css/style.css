@@ -502,7 +502,7 @@ header nav .burger.active .line-3 {
 }
 .swiper-container {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 .swiper-container .swiper {
   width: auto;
