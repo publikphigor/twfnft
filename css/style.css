@@ -110,8 +110,8 @@ a:hover {
     gap: 16px;
   }
   h1,
-h2,
-h3 {
+  h2,
+  h3 {
     line-height: 1.2;
   }
   .main-heading {
@@ -121,7 +121,7 @@ h3 {
     font-size: 24px;
   }
   .col-12,
-.col-md-6 {
+  .col-md-6 {
     width: 100%;
   }
 }
@@ -313,7 +313,7 @@ header nav .burger.active .line-3 {
 @media screen and (max-width: 520px) {
   .navbar {
     left: 5%;
-    right: 10%;
+    right: 5%;
     min-width: 80%;
     top: 120px;
   }
@@ -392,7 +392,7 @@ header nav .burger.active .line-3 {
 
 @media screen and (max-width: 820px) {
   .mint-text,
-.mint-images {
+  .mint-images {
     width: 64% !important;
     text-align: center;
   }
@@ -408,7 +408,7 @@ header nav .burger.active .line-3 {
 }
 @media screen and (max-width: 520px) {
   .mint-images,
-.mint-text {
+  .mint-text {
     width: 100% !important;
   }
   .play-video {
@@ -855,16 +855,20 @@ header nav .burger.active .line-3 {
   #faq-section .container {
     padding-inline: 8px;
   }
+  #faq-section .faqs .faq {
+    border: 2px solid #18063c;
+  }
   #faq-section .faqs .faq .faq-content.active {
-    padding: 8px;
+    padding: 16px;
   }
   #faq-section .faqs .faq .faq-content.active p {
     font-size: 16px;
     line-height: 1.5;
   }
   #faq-section .faqs .faq .faq-toggle {
-    padding: 8px;
+    padding: 16px;
     font-size: 12px;
+    font-weight: 800;
   }
   #faq-section .faqs .faq .faq-toggle::after {
     width: 12px;
