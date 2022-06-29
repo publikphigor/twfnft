@@ -312,9 +312,8 @@ header nav .burger.active .line-3 {
 }
 @media screen and (max-width: 520px) {
   .navbar {
-    left: 5%;
     right: 5%;
-    min-width: 80%;
+    width: 90%;
     top: 120px;
   }
   .navbar .mobile-links {
