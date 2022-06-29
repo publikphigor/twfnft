@@ -311,6 +311,9 @@ header nav .burger.active .line-3 {
   }
 }
 @media screen and (max-width: 520px) {
+  header {
+    padding-block: 16px;
+  }
   .navbar {
     right: 5%;
     width: 90%;
