@@ -264,8 +264,10 @@ header nav .burger.active .line-3 {
   transform: translateX(50px);
 }
 .navbar .nav-social-links {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .navbar .nav-social-links a {
@@ -864,7 +866,8 @@ header nav .burger.active .line-3 {
   #faq-section .faqs .faq .faq-content.active {
     padding: 16px;
   }
-  #faq-section .faqs .faq .faq-content.active p {
+  #faq-section .faqs .faq .faq-content.active p,
+  #faq-section .faqs .faq .faq-content.active ul li {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -876,7 +879,7 @@ header nav .burger.active .line-3 {
   #faq-section .faqs .faq .faq-toggle::after {
     width: 12px;
     height: 12px;
-    right: 8px;
+    right: 16px;
   }
 }
 footer {
