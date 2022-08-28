@@ -506,12 +506,17 @@ header nav .burger.active .line-3 {
 }
 .swiper-container {
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  margin-top: 50px;
 }
 .swiper-container .swiper {
-  width: auto;
+  width: calc(300 * 12%);
   display: flex;
   gap: 30px;
+  animation: 12s scroller linear infinite;
+}
+.swiper-container .swiper:hover {
+  animation-play-state: paused;
 }
 .swiper-container .swiper .swiper-card {
   flex-shrink: 0;
@@ -578,6 +583,9 @@ header nav .burger.active .line-3 {
 }
 
 @media screen and (max-width: 820px) {
+  .swiper-container {
+    margin-top: 0;
+  }
   #about {
     padding: 24px;
   }
@@ -592,8 +600,6 @@ header nav .burger.active .line-3 {
   #about .about-access .access-card p {
     margin-block: 16px;
   }
-}
-@media screen and (max-width: 820px) {
   #about .about-content {
     width: 100%;
   }
@@ -780,7 +786,6 @@ header nav .burger.active .line-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0.2s ease-in-out;
 }
 #faq-section .faqs .faq .faq-toggle {
   font-size: 24px;
@@ -808,10 +813,9 @@ header nav .burger.active .line-3 {
   transform: translateY(-50%) rotate(45deg);
 }
 #faq-section .faqs .faq .faq-content {
-  height: 0;
   overflow: hidden;
-  visibility: hidden;
-  transition: all 0.2s ease-in-out;
+  max-height: 0;
+  transition: max-height 0.4s ease;
   padding-inline: 56px;
 }
 #faq-section .faqs .faq .faq-content ol {
@@ -822,11 +826,8 @@ header nav .burger.active .line-3 {
   color: #18063c;
 }
 #faq-section .faqs .faq .faq-content.active {
-  height: auto;
-  visibility: visible;
-  overflow: visible;
+  max-height: 100%;
   padding-block: 16px;
-  transition: all 0.2Ss ease-in-out;
 }
 
 @media screen and (max-width: 820px) {
@@ -937,5 +938,15 @@ footer .social-links a:not(:last-child):hover {
   }
   footer .social-links {
     order: 2;
+  }
+}
+
+@keyframes scroller {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-3600px);
   }
 }
