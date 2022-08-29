@@ -53,17 +53,24 @@ const faqContainers = document.querySelectorAll(".faq");
 const faqToggleBtns = document.querySelectorAll(".faq-toggle");
 const faqContents = document.querySelectorAll(".faq-content");
 
-for (const [btnIndex, toggleBtn] of faqToggleBtns.entries()) {
-  toggleBtn.addEventListener("click", function (e) {
+for (const [faqIndex, faq] of faqContainers.entries()) {
+  faq.addEventListener("click", function (e) {
+    // set clicked accordion/button to the active
+    let activeFaq = e.target.closest(".faq");
+    let activeBtn = activeFaq.querySelector(".faq-toggle");
+
+    // remove active class from all buttons and accordions except the active one
     faqToggleBtns.forEach((button) => {
-      if (button === e.target) return;
+      if (button === activeBtn) return;
       button.classList.remove("active");
     });
-    e.target.classList.toggle("active");
-    faqContents.forEach((faqContent) => {
-      if (faqContent === faqContents.item(btnIndex)) return;
-      faqContent.classList.remove("active");
+    faqContainers.forEach((container) => {
+      if (container === faqContainers.item(faqIndex)) return;
+      container.classList.remove("active");
     });
-    faqContents.item(btnIndex).classList.toggle("active");
+
+    // toggle button and accordion
+    activeFaq.classList.toggle("active");
+    activeBtn.classList.toggle("active");
   });
 }

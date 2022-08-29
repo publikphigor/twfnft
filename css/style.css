@@ -804,7 +804,7 @@ header nav .burger.active .line-3 {
   right: 56px;
   top: 50%;
   transform: translateY(-50%);
-  transition: all 0.2s ease;
+  transition: all 400ms ease;
   background: url("/assets/open.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -815,8 +815,9 @@ header nav .burger.active .line-3 {
 #faq-section .faqs .faq .faq-content {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.4s ease;
+  padding-block: 0;
   padding-inline: 56px;
+  transition: max-height 400ms, padding-block 400ms;
 }
 #faq-section .faqs .faq .faq-content ol {
   padding-left: 16px;
@@ -825,8 +826,9 @@ header nav .burger.active .line-3 {
   padding-left: 8px;
   color: #18063c;
 }
-#faq-section .faqs .faq .faq-content.active {
-  max-height: 100%;
+#faq-section .faqs .faq.active .faq-content {
+  display: block;
+  max-height: 20rem;
   padding-block: 16px;
 }
 
@@ -864,11 +866,15 @@ header nav .burger.active .line-3 {
   #faq-section .faqs .faq {
     border: 2px solid #18063c;
   }
-  #faq-section .faqs .faq .faq-content.active {
+  #faq-section .faqs .faq .faq-content {
+    padding-block: 0;
+    padding-inline: 16px;
+  }
+  #faq-section .faqs .faq.active .faq-content {
     padding: 16px;
   }
-  #faq-section .faqs .faq .faq-content.active p,
-  #faq-section .faqs .faq .faq-content.active ul li {
+  #faq-section .faqs .faq .faq-content p,
+  #faq-section .faqs .faq .faq-content ul li {
     font-size: 16px;
     line-height: 1.5;
   }
