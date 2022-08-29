@@ -654,6 +654,7 @@ header nav .burger.active .line-3 {
   position: absolute;
   background-color: #18063c;
   left: -37px;
+  top: 8px;
 }
 .roadmap-container .roadmap .roadmap-item img {
   width: 100px;
@@ -686,6 +687,7 @@ header nav .burger.active .line-3 {
     width: 8px;
     height: 8px;
     left: -21.5px;
+    top: 5px;
   }
   .roadmap-container .roadmap .roadmap-item .sub-heading {
     font-size: 16px;
@@ -828,7 +830,7 @@ header nav .burger.active .line-3 {
 }
 #faq-section .faqs .faq.active .faq-content {
   display: block;
-  max-height: 20rem;
+  max-height: 40rem;
   padding-block: 16px;
 }
 
@@ -874,7 +876,7 @@ header nav .burger.active .line-3 {
     padding: 16px;
   }
   #faq-section .faqs .faq .faq-content p,
-  #faq-section .faqs .faq .faq-content ul li {
+  #faq-section .faqs .faq .faq-content ol li {
     font-size: 16px;
     line-height: 1.5;
   }
